@@ -1,21 +1,17 @@
 package com.example.mvi_tmdb.api
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class MoviesResponse {
-
+data class MoviesResponse(
     @SerializedName("page")
-    @Expose
-    var page: Int? = null
-    @SerializedName("total_results")
-    @Expose
-    var totalResults: Int? = null
-    @SerializedName("total_pages")
-    @Expose
-    var totalPages: Int? = null
-    @SerializedName("results")
-    @Expose
-    var moviesList: List<Movie>? = null
+    val page: Int?,
 
-}
+    @SerializedName("results")
+    val movies: List<Movie>?,
+
+    @SerializedName("total_pages")
+    val total_pages: Int?,
+
+    @SerializedName("total_results")
+    val total_results: Int?
+)

@@ -27,7 +27,7 @@ class CommonUtils {
             Glide
                 .with(context)
                 .applyDefaultRequestOptions(requestOptions)
-                .load(MOVIES_POSTER_PATH_BASE_URL + movie.posterPath)
+                .load(MOVIES_POSTER_PATH_BASE_URL + movie.poster_path)
                 .into(imageView)
         }
 

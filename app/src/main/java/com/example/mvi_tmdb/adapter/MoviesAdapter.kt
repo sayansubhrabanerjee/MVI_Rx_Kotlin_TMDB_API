@@ -34,7 +34,7 @@ class MoviesAdapter(
                 CommonUtils.configureGlide(itemView.imageView_avatar, movieData, context)
                 itemView.textView_title.text = movieData.title
                 itemView.textView_overview.text = movieData.overview
-                itemView.imageView_popularity.setImageResource(CommonUtils.checkRatings(movieData.voteAverage!!))
+                itemView.imageView_popularity.setImageResource(CommonUtils.checkRatings(movieData.vote_average!!))
 
                 itemView.setOnClickListener { listener.onItemClick(movieData) }
             }

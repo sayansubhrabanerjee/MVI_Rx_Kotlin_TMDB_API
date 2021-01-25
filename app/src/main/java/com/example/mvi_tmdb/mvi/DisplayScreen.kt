@@ -80,13 +80,13 @@ class DisplayScreen(
             }
 
 
-        /*Action -> Result*/
+        /*Action -> Movie*/
 
         private fun show(repo: IMoviesRepo) =
             ObservableTransformer<DisplayAction.ScreenLoad.Show, DisplayResult.ScreenLoad> {
                 it.flatMap {
                     repo.getPopularMovies().map { response ->
-                        DisplayResult.ScreenLoad.Show(response.moviesList!!)
+                        DisplayResult.ScreenLoad.Show(response.movies!!)
                     }.toObservable()
                 }
             }

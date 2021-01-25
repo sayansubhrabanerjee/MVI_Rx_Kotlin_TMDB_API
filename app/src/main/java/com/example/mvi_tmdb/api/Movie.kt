@@ -1,51 +1,48 @@
 package com.example.mvi_tmdb.api
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class Movie {
+data class Movie(
+
+    @SerializedName("adult")
+    val adult: Boolean?,
+
+    @SerializedName("backdrop_path")
+    val backdrop_path: String?,
+
+    @SerializedName("genre_ids")
+    val genre_ids: List<Int>?,
+
+    @SerializedName("id")
+    val id: Int?,
+
+    @SerializedName("original_language")
+    val original_language: String?,
+
+    @SerializedName("original_title")
+    val original_title: String?,
+
+    @SerializedName("overview")
+    val overview: String?,
+
+    @SerializedName("popularity")
+    val popularity: Double?,
+
+    @SerializedName("poster_path")
+    val poster_path: String?,
+
+    @SerializedName("release_date")
+    val release_date: String?,
+
+    @SerializedName("title")
+    val title: String?,
+
+    @SerializedName("video")
+    val video: Boolean?,
+
+    @SerializedName("vote_average")
+    val vote_average: Double?,
 
     @SerializedName("vote_count")
-    @Expose
-    var voteCount: Int? = null
-    @SerializedName("id")
-    @Expose
-    var id: Int? = null
-    @SerializedName("video")
-    @Expose
-    var video: Boolean? = null
-    @SerializedName("vote_average")
-    @Expose
-    var voteAverage: Double? = null
-    @SerializedName("title")
-    @Expose
-    var title: String? = null
-    @SerializedName("popularity")
-    @Expose
-    var popularity: Double? = null
-    @SerializedName("poster_path")
-    @Expose
-    var posterPath: String? = null
-    @SerializedName("original_language")
-    @Expose
-    var originalLanguage: String? = null
-    @SerializedName("original_title")
-    @Expose
-    var originalTitle: String? = null
-    @SerializedName("genre_ids")
-    @Expose
-    var genreIds: List<Int>? = null
-    @SerializedName("backdrop_path")
-    @Expose
-    var backdropPath: String? = null
-    @SerializedName("adult")
-    @Expose
-    var adult: Boolean? = null
-    @SerializedName("overview")
-    @Expose
-    var overview: String? = null
-    @SerializedName("release_date")
-    @Expose
-    var releaseDate: String? = null
-
-}
+    val vote_count: Int?
+)
