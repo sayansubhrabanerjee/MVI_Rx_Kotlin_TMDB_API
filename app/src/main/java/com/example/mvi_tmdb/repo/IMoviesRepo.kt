@@ -1,8 +1,8 @@
 package com.example.mvi_tmdb.repo
 
 import com.example.mvi_tmdb.api.MoviesResponse
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.rxjava3.core.Single
 
 interface IMoviesRepo {
-    fun getPopularMovies(): Flowable<MoviesResponse>
+    fun getPopularMovies(): Single<MoviesResponse>
 }
